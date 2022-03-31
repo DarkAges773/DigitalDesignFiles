@@ -14,7 +14,7 @@ namespace MiceFileClient.Processors
 	class FileProcessor
 	{
 		private static readonly string controller = "files";
-		private static readonly string baseUrl = "https://localhost:44372";
+		private static readonly string baseUrl = Properties.Settings.Default.HostUrl;
 		public static async Task SaveFile(string fileSaveDirectory, byte[] fileData, string fileName)
 		{
 			string filePath = $"{fileSaveDirectory}\\{fileName}";

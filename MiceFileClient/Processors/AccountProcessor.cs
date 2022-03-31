@@ -12,7 +12,7 @@ namespace MiceFileClient.Processors
 	{
 		// TODO: Refactor boilerplate
 		private static readonly string controller = "account";
-		private static readonly string baseUrl = "https://localhost:44372";
+		private static readonly string baseUrl = Properties.Settings.Default.HostUrl;
 		public static async Task<string> LogIn(LoginModel model)
 		{
 			string action = "login";
